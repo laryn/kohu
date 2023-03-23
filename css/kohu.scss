@@ -1,0 +1,410 @@
+@import 'variables.scss';
+
+.dropbutton-wrapper {
+
+  .dropbutton a,
+  button {
+    background-color: $status;
+  }
+}
+
+table {
+
+  tr.odd,
+  tr.even {
+    .form-item {
+      white-space: normal;
+    }
+  }
+}
+
+.image-widget {
+  display: flex;
+
+  .image-widget-data {
+    background-color: rgba(255, 255, 255, .2);
+    padding: .25rem 1rem;
+    max-width: 75%;
+  }
+
+  .image-preview {
+    max-width: 25%;
+  }
+}
+
+.select2-container.ac-replaced-by-select2 {
+  min-width: 295px;
+}
+
+.node-form,
+.taxonomy-form,
+.taxonomy-form-term,
+.user-profile-form {
+  div.help {
+    font-style: italic;
+    color: $grey-alt;
+  }
+
+  > div {
+    font-size: 0;
+
+
+    > fieldset.form-wrapper,
+    > details {
+      font-size: 1rem;
+      margin: 0;
+      border: 2px solid #fff;
+      ;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      > legend {
+        display: inline-block;
+        float: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: $fieldset_label_bg;
+        color: $text;
+        max-width: max-content;
+        padding-right: 1rem;
+
+        .fieldset-legend {
+          font-size: .6rem;
+        }
+      }
+
+      .fieldset-legend,
+      summary {
+        background-color: transparent;
+        font-size: .8rem;
+        border-bottom: none;
+      }
+
+      > .fieldset-wrapper,
+      > .details-child-wrapper {
+        padding: 0;
+        margin: 0 1rem;
+        border: none;
+
+        > .form-wrapper {
+          background-color: rgba(255, 255, 255, .4);
+          margin: .25rem 0;
+          padding: .25rem 0;
+          border: 1px solid --border;
+
+          fieldset {
+            margin: 0;
+            border: 0;
+          }
+        }
+
+        .form-item {
+          margin-left: 1rem;
+          margin-right: 1rem;
+          max-width: 100%;
+          position: relative;
+
+          .container-inline-date {
+            display: flex;
+            align-items: flex-end;
+
+            > div {
+              max-width: 35%;
+              margin-left: 0;
+              margin-right: .5rem;
+            }
+
+            > div:first-child {
+              max-width: 65%;
+            }
+          }
+        }
+
+        .form-type-textarea {
+          margin: 0;
+        }
+      }
+    }
+
+    > fieldset.group-main {
+      > legend {
+        display: none;
+      }
+    }
+
+    fieldset.tightened,
+    details.tightened {
+      padding: 0;
+      margin: 0;
+
+      legend {
+        display: none;
+      }
+
+      .fieldset-wrapper,
+      .details-child-wrapper {
+        padding: 0;
+        margin: 0;
+
+        label {
+          padding: 0;
+        }
+      }
+    }
+
+    div {
+      font-size: 1rem;
+      width: auto;
+    }
+
+    > div {
+      width: 100%;
+
+      div {
+        width: auto;
+      }
+    }
+  }
+
+  > div:first-child {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-end;
+
+    fieldset,
+    section,
+    details {
+      flex-grow: 1;
+    }
+
+    .form-item-langcode {
+      width: 100%;
+    }
+  }
+
+  .vertical-tabs {
+    width: 100%;
+  }
+}
+
+.field-type-image {
+  .image-preview {
+    img {
+      max-width: 150px;
+    }
+  }
+}
+
+.user-picture {
+  max-width: 150px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  float: left;
+}
+
+.form-type-file {
+  clear: left;
+}
+
+.group-media {
+  background-color: $media_bg;
+}
+
+.group-details {
+  background-color: $details_bg;
+}
+
+.group-additional-content {
+  background-color: $additional_bg;
+}
+
+.js input.form-autocomplete + .autocomplete-icon {
+  position: absolute;
+  right: 2.25em;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+}
+
+.field-widget-taxonomy-autocomplete {
+  > .form-item {
+    position: relative;
+  }
+}
+
+fieldset fieldset,
+details details,
+input.form-autocomplete,
+input.form-text,
+input.form-tel,
+input.form-email,
+input.form-url,
+input.form-color,
+input.form-number,
+input.form-search,
+input.form-file,
+textarea.form-textarea {
+  background-color: rgba(255, 255, 255, .6);
+}
+
+fieldset,
+section,
+details {
+
+  select.form-select,
+  table {
+    max-width: 100%;
+
+    th.field-label {
+      padding: 0;
+      background-color: transparent;
+
+      label {
+        padding: 0;
+      }
+    }
+
+    tr.odd,
+    tr.even {
+      background-color: transparent;
+
+      td {
+        padding: 5px;
+      }
+    }
+  }
+
+  fieldset,
+  details {
+    border: none;
+  }
+}
+
+@media (min-width: 40em) {
+
+  .third,
+  .twothird,
+  .half,
+  .quarter,
+  .full,
+  .field-group-fieldset,
+  .field-group-details,
+  .group-details,
+  .group-content,
+  .group-media {
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, .05);
+  }
+
+  .full,
+  .field-group-fieldset,
+  .field-group-details,
+  .form-wrapper {
+    width: 100%;
+    flex-grow: 10;
+    display: block;
+    flex-basis: 1;
+  }
+
+  .third,
+  .group-details,
+  .group-categorization,
+  .group-meta {
+    width: 33%;
+    margin: 0;
+    flex-grow: 3.3;
+    display: inline-block;
+    flex-basis: .33;
+  }
+
+  .twothird,
+  .group-content,
+  .group-main-content {
+    width: 64%;
+    margin: 0;
+    flex-grow: 6.6;
+    display: inline-block;
+    flex-basis: .66;
+  }
+
+  .half {
+    width: 50%;
+    margin: 0;
+    flex-grow: 5;
+    display: inline-block;
+    flex-basis: .5;
+  }
+
+  .quarter {
+    width: 25%;
+    margin: 0;
+    flex-grow: 2.5;
+    display: inline-block;
+    flex-basis: .25;
+  }
+}
+
+/* Misc specific hacks */
+
+thead {
+  tr:first-of-type {
+    border: none;
+
+    th {
+      border: none;
+    }
+  }
+}
+
+/* Youtube field in a smaller width */
+.field-type-youtube {
+  table {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+/* Link fields */
+.link-field-subrow {
+  display: flex;
+  flex-flow: column;
+}
+
+@media all and (min-width: $desktop-min) {
+  .link-field-subrow {
+    flex-flow: row wrap;
+
+    > div {
+      min-width: 200px;
+    }
+  }
+}
+
+.field-type-entityreference {
+  input {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  input.form-submit {
+    width: inherit;
+  }
+
+  table {
+    tr:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.entityconnect-edit.edit-icon :first-child,
+.entityconnect-add.add-icon :first-child {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+pre {
+  color: #000;
+}

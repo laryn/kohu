@@ -1,0 +1,15 @@
+name = Kohu
+description = This is a subtheme of Lumi with some customizations.
+backdrop = 1.x
+base theme = lumi
+
+; Include the Bootstrap4 Grid System
+libraries[] = bootstrap4-gs
+
+stylesheets[all][] = css/lumi.css
+stylesheets[all][] = css/kohu.css
+ckeditor_stylesheets[] = css/ckeditor-iframe.css
+scripts[] = js/kohu.js
+
+project = aten
+version = 1.x-1.0.0

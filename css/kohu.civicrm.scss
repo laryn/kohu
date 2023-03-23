@@ -1,0 +1,97 @@
+/* CiviCRM tweaks */
+.page-civicrm {
+  .l-header {
+    margin: 0 0 10px 0;
+  }
+
+  .layout {
+    margin: 0;
+  }
+
+  label {
+    text-transform: none;
+  }
+
+  #hero {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    position: relative;
+    color: #333;
+  }
+
+  .l-hero-inner {
+    padding: 20px 0 40px 0;
+    margin-right: 40px;
+    margin-left: 40px;
+    background: #fff;
+    position: relative;
+    color: #333;
+  }
+}
+
+.page-civicrm-contact-view:not([class*="page-civicrm-contact-view-"]) #crm-container .crm-contact-tabs-list .crm-tab-button {
+  background: transparent;
+}
+
+.page-civicrm-contact-view:not([class*="page-civicrm-contact-view-"]) #crm-container .crm-contact-tabs-list .crm-tab-button.ui-tabs-active,
+.page-civicrm-contact-view:not([class*="page-civicrm-contact-view-"]) #crm-container .crm-contact-tabs-list .crm-tab-button:hover {
+  background: #e8eef0;
+}
+
+.page-civicrm .crm-container .messages.status,
+.page-civicrm .crm-container :not(.crm-footer) .messages.status {
+  padding-left: 3.5rem;
+}
+
+.crm-container :not(.crm-footer) .messages.status .crm-i {
+  padding: 1rem .5rem;
+  background-color: #e6ab5e;
+}
+
+// Replicates #page in Drupal 7 (assumes main content in hero area in Boxton for now)
+.l-hero-inner {
+  padding: 20px 0 40px 0;
+  margin-right: 40px;
+  margin-left: 40px;
+  background: #fff;
+  position: relative;
+  color: #333;
+}
+
+.page-civicrm-contact-view:not([class*="page-civicrm-contact-view-"]) .l-hero-inner {
+  margin: 0;
+  padding: 0;
+}
+
+// Account for Civi menu possibly underneath admin menu
+body.crm-menubar-below-cms-menu #crm-notification-container {
+  top: 90px;
+}
+
+.crm-container {
+
+  .messages.status,
+  :not(.crm-footer) .messages.status {
+    background-color: #fbf0e2;
+    border: 1px solid #e6ab5e;
+    border-radius: 2px;
+    color: #464354;
+    padding: 16px 20px;
+  }
+
+  div.messages.status::before {
+    display: none;
+  }
+}
+
+/* LUMI/KOHU SPECIFIC */
+/* Status messages need to override Lumi theming which uses !important */
+.crm-container > .status,
+.crm-container :not(.crm-footer) .messages {
+  color: #464354 !important;
+
+  a {
+    color: #2786c2 !important;
+  }
+}

@@ -1,0 +1,634 @@
+/*** Variables ***/
+:root {
+  /* Theme Colours */
+  --bg: #fff;
+  --bg-alt: #ebebeb;
+  --border: #dcdcdc;
+  --text: #232323;
+  --text-alt: #969696;
+  --grey: #c8c8c8;
+  --grey-alt: #646464;
+  --table-row: #f6f6f6;
+  --table-row-hover: rgba(0, 0, 0, 0.08);
+  --table-cell-active: rgba(0, 0, 0, 0.04);
+  --status: #18bc9c;
+  --status-alt: #149a80;
+  --info: #3498db;
+  --info-alt: #2384c6;
+  --warning: #f39c12;
+  --warning-alt: #d4860b;
+  --error: #e74c3c;
+  --error-alt: #e12e1c;
+  /* User-Selected Colours (default values) */
+  --primary: hsl(210, 29%, 24%);
+  --primary-alt: hsl(210, 29%, 17%);
+  --primary-text: #fff;
+  --links: hsl(168, 77%, 42%);
+  --links-alt: hsl(168, 77%, 30%);
+  --links-text: #fff;
+  /* Font Awesome */
+  --fa-family-free: "Font Awesome 5 Free";
+  --fa-weight-solid: 900;
+  --fa-weight-regular: 400;
+  /* Other */
+  --radius: 3px;
+}
+
+.dropbutton-wrapper .dropbutton a,
+.dropbutton-wrapper button {
+  background-color: #18bc9c;
+}
+
+table tr.odd .form-item,
+table tr.even .form-item {
+  white-space: normal;
+}
+
+.image-widget {
+  display: flex;
+}
+.image-widget .image-widget-data {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 1rem;
+  max-width: 75%;
+}
+.image-widget .image-preview {
+  max-width: 25%;
+}
+
+.select2-container.ac-replaced-by-select2 {
+  min-width: 295px;
+}
+
+.node-form div.help,
+.taxonomy-form div.help,
+.taxonomy-form-term div.help,
+.user-profile-form div.help {
+  font-style: italic;
+  color: #646464;
+}
+.node-form > div,
+.taxonomy-form > div,
+.taxonomy-form-term > div,
+.user-profile-form > div {
+  font-size: 0;
+}
+.node-form > div > fieldset.form-wrapper,
+.node-form > div > details,
+.taxonomy-form > div > fieldset.form-wrapper,
+.taxonomy-form > div > details,
+.taxonomy-form-term > div > fieldset.form-wrapper,
+.taxonomy-form-term > div > details,
+.user-profile-form > div > fieldset.form-wrapper,
+.user-profile-form > div > details {
+  font-size: 1rem;
+  margin: 0;
+  border: 2px solid #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.node-form > div > fieldset.form-wrapper > legend,
+.node-form > div > details > legend,
+.taxonomy-form > div > fieldset.form-wrapper > legend,
+.taxonomy-form > div > details > legend,
+.taxonomy-form-term > div > fieldset.form-wrapper > legend,
+.taxonomy-form-term > div > details > legend,
+.user-profile-form > div > fieldset.form-wrapper > legend,
+.user-profile-form > div > details > legend {
+  display: inline-block;
+  float: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(24, 188, 156, 0.3);
+  color: #232323;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding-right: 1rem;
+}
+.node-form > div > fieldset.form-wrapper > legend .fieldset-legend,
+.node-form > div > details > legend .fieldset-legend,
+.taxonomy-form > div > fieldset.form-wrapper > legend .fieldset-legend,
+.taxonomy-form > div > details > legend .fieldset-legend,
+.taxonomy-form-term > div > fieldset.form-wrapper > legend .fieldset-legend,
+.taxonomy-form-term > div > details > legend .fieldset-legend,
+.user-profile-form > div > fieldset.form-wrapper > legend .fieldset-legend,
+.user-profile-form > div > details > legend .fieldset-legend {
+  font-size: 0.6rem;
+}
+.node-form > div > fieldset.form-wrapper .fieldset-legend,
+.node-form > div > fieldset.form-wrapper summary,
+.node-form > div > details .fieldset-legend,
+.node-form > div > details summary,
+.taxonomy-form > div > fieldset.form-wrapper .fieldset-legend,
+.taxonomy-form > div > fieldset.form-wrapper summary,
+.taxonomy-form > div > details .fieldset-legend,
+.taxonomy-form > div > details summary,
+.taxonomy-form-term > div > fieldset.form-wrapper .fieldset-legend,
+.taxonomy-form-term > div > fieldset.form-wrapper summary,
+.taxonomy-form-term > div > details .fieldset-legend,
+.taxonomy-form-term > div > details summary,
+.user-profile-form > div > fieldset.form-wrapper .fieldset-legend,
+.user-profile-form > div > fieldset.form-wrapper summary,
+.user-profile-form > div > details .fieldset-legend,
+.user-profile-form > div > details summary {
+  background-color: transparent;
+  font-size: 0.8rem;
+  border-bottom: none;
+}
+.node-form > div > fieldset.form-wrapper > .fieldset-wrapper,
+.node-form > div > fieldset.form-wrapper > .details-child-wrapper,
+.node-form > div > details > .fieldset-wrapper,
+.node-form > div > details > .details-child-wrapper,
+.taxonomy-form > div > fieldset.form-wrapper > .fieldset-wrapper,
+.taxonomy-form > div > fieldset.form-wrapper > .details-child-wrapper,
+.taxonomy-form > div > details > .fieldset-wrapper,
+.taxonomy-form > div > details > .details-child-wrapper,
+.taxonomy-form-term > div > fieldset.form-wrapper > .fieldset-wrapper,
+.taxonomy-form-term > div > fieldset.form-wrapper > .details-child-wrapper,
+.taxonomy-form-term > div > details > .fieldset-wrapper,
+.taxonomy-form-term > div > details > .details-child-wrapper,
+.user-profile-form > div > fieldset.form-wrapper > .fieldset-wrapper,
+.user-profile-form > div > fieldset.form-wrapper > .details-child-wrapper,
+.user-profile-form > div > details > .fieldset-wrapper,
+.user-profile-form > div > details > .details-child-wrapper {
+  padding: 0;
+  margin: 0 1rem;
+  border: none;
+}
+.node-form > div > fieldset.form-wrapper > .fieldset-wrapper > .form-wrapper,
+.node-form > div > fieldset.form-wrapper > .details-child-wrapper > .form-wrapper,
+.node-form > div > details > .fieldset-wrapper > .form-wrapper,
+.node-form > div > details > .details-child-wrapper > .form-wrapper,
+.taxonomy-form > div > fieldset.form-wrapper > .fieldset-wrapper > .form-wrapper,
+.taxonomy-form > div > fieldset.form-wrapper > .details-child-wrapper > .form-wrapper,
+.taxonomy-form > div > details > .fieldset-wrapper > .form-wrapper,
+.taxonomy-form > div > details > .details-child-wrapper > .form-wrapper,
+.taxonomy-form-term > div > fieldset.form-wrapper > .fieldset-wrapper > .form-wrapper,
+.taxonomy-form-term > div > fieldset.form-wrapper > .details-child-wrapper > .form-wrapper,
+.taxonomy-form-term > div > details > .fieldset-wrapper > .form-wrapper,
+.taxonomy-form-term > div > details > .details-child-wrapper > .form-wrapper,
+.user-profile-form > div > fieldset.form-wrapper > .fieldset-wrapper > .form-wrapper,
+.user-profile-form > div > fieldset.form-wrapper > .details-child-wrapper > .form-wrapper,
+.user-profile-form > div > details > .fieldset-wrapper > .form-wrapper,
+.user-profile-form > div > details > .details-child-wrapper > .form-wrapper {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0.25rem 0;
+  padding: 0.25rem 0;
+  border: 1px solid --border;
+}
+.node-form > div > fieldset.form-wrapper > .fieldset-wrapper > .form-wrapper fieldset,
+.node-form > div > fieldset.form-wrapper > .details-child-wrapper > .form-wrapper fieldset,
+.node-form > div > details > .fieldset-wrapper > .form-wrapper fieldset,
+.node-form > div > details > .details-child-wrapper > .form-wrapper fieldset,
+.taxonomy-form > div > fieldset.form-wrapper > .fieldset-wrapper > .form-wrapper fieldset,
+.taxonomy-form > div > fieldset.form-wrapper > .details-child-wrapper > .form-wrapper fieldset,
+.taxonomy-form > div > details > .fieldset-wrapper > .form-wrapper fieldset,
+.taxonomy-form > div > details > .details-child-wrapper > .form-wrapper fieldset,
+.taxonomy-form-term > div > fieldset.form-wrapper > .fieldset-wrapper > .form-wrapper fieldset,
+.taxonomy-form-term > div > fieldset.form-wrapper > .details-child-wrapper > .form-wrapper fieldset,
+.taxonomy-form-term > div > details > .fieldset-wrapper > .form-wrapper fieldset,
+.taxonomy-form-term > div > details > .details-child-wrapper > .form-wrapper fieldset,
+.user-profile-form > div > fieldset.form-wrapper > .fieldset-wrapper > .form-wrapper fieldset,
+.user-profile-form > div > fieldset.form-wrapper > .details-child-wrapper > .form-wrapper fieldset,
+.user-profile-form > div > details > .fieldset-wrapper > .form-wrapper fieldset,
+.user-profile-form > div > details > .details-child-wrapper > .form-wrapper fieldset {
+  margin: 0;
+  border: 0;
+}
+.node-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item,
+.node-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item,
+.node-form > div > details > .fieldset-wrapper .form-item,
+.node-form > div > details > .details-child-wrapper .form-item,
+.taxonomy-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item,
+.taxonomy-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item,
+.taxonomy-form > div > details > .fieldset-wrapper .form-item,
+.taxonomy-form > div > details > .details-child-wrapper .form-item,
+.taxonomy-form-term > div > fieldset.form-wrapper > .fieldset-wrapper .form-item,
+.taxonomy-form-term > div > fieldset.form-wrapper > .details-child-wrapper .form-item,
+.taxonomy-form-term > div > details > .fieldset-wrapper .form-item,
+.taxonomy-form-term > div > details > .details-child-wrapper .form-item,
+.user-profile-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item,
+.user-profile-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item,
+.user-profile-form > div > details > .fieldset-wrapper .form-item,
+.user-profile-form > div > details > .details-child-wrapper .form-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-width: 100%;
+  position: relative;
+}
+.node-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date,
+.node-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date,
+.node-form > div > details > .fieldset-wrapper .form-item .container-inline-date,
+.node-form > div > details > .details-child-wrapper .form-item .container-inline-date,
+.taxonomy-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date,
+.taxonomy-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date,
+.taxonomy-form > div > details > .fieldset-wrapper .form-item .container-inline-date,
+.taxonomy-form > div > details > .details-child-wrapper .form-item .container-inline-date,
+.taxonomy-form-term > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date,
+.taxonomy-form-term > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date,
+.taxonomy-form-term > div > details > .fieldset-wrapper .form-item .container-inline-date,
+.taxonomy-form-term > div > details > .details-child-wrapper .form-item .container-inline-date,
+.user-profile-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date,
+.user-profile-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date,
+.user-profile-form > div > details > .fieldset-wrapper .form-item .container-inline-date,
+.user-profile-form > div > details > .details-child-wrapper .form-item .container-inline-date {
+  display: flex;
+  align-items: flex-end;
+}
+.node-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date > div,
+.node-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date > div,
+.node-form > div > details > .fieldset-wrapper .form-item .container-inline-date > div,
+.node-form > div > details > .details-child-wrapper .form-item .container-inline-date > div,
+.taxonomy-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date > div,
+.taxonomy-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date > div,
+.taxonomy-form > div > details > .fieldset-wrapper .form-item .container-inline-date > div,
+.taxonomy-form > div > details > .details-child-wrapper .form-item .container-inline-date > div,
+.taxonomy-form-term > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date > div,
+.taxonomy-form-term > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date > div,
+.taxonomy-form-term > div > details > .fieldset-wrapper .form-item .container-inline-date > div,
+.taxonomy-form-term > div > details > .details-child-wrapper .form-item .container-inline-date > div,
+.user-profile-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date > div,
+.user-profile-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date > div,
+.user-profile-form > div > details > .fieldset-wrapper .form-item .container-inline-date > div,
+.user-profile-form > div > details > .details-child-wrapper .form-item .container-inline-date > div {
+  max-width: 35%;
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+.node-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date > div:first-child,
+.node-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date > div:first-child,
+.node-form > div > details > .fieldset-wrapper .form-item .container-inline-date > div:first-child,
+.node-form > div > details > .details-child-wrapper .form-item .container-inline-date > div:first-child,
+.taxonomy-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date > div:first-child,
+.taxonomy-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date > div:first-child,
+.taxonomy-form > div > details > .fieldset-wrapper .form-item .container-inline-date > div:first-child,
+.taxonomy-form > div > details > .details-child-wrapper .form-item .container-inline-date > div:first-child,
+.taxonomy-form-term > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date > div:first-child,
+.taxonomy-form-term > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date > div:first-child,
+.taxonomy-form-term > div > details > .fieldset-wrapper .form-item .container-inline-date > div:first-child,
+.taxonomy-form-term > div > details > .details-child-wrapper .form-item .container-inline-date > div:first-child,
+.user-profile-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-item .container-inline-date > div:first-child,
+.user-profile-form > div > fieldset.form-wrapper > .details-child-wrapper .form-item .container-inline-date > div:first-child,
+.user-profile-form > div > details > .fieldset-wrapper .form-item .container-inline-date > div:first-child,
+.user-profile-form > div > details > .details-child-wrapper .form-item .container-inline-date > div:first-child {
+  max-width: 65%;
+}
+.node-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-type-textarea,
+.node-form > div > fieldset.form-wrapper > .details-child-wrapper .form-type-textarea,
+.node-form > div > details > .fieldset-wrapper .form-type-textarea,
+.node-form > div > details > .details-child-wrapper .form-type-textarea,
+.taxonomy-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-type-textarea,
+.taxonomy-form > div > fieldset.form-wrapper > .details-child-wrapper .form-type-textarea,
+.taxonomy-form > div > details > .fieldset-wrapper .form-type-textarea,
+.taxonomy-form > div > details > .details-child-wrapper .form-type-textarea,
+.taxonomy-form-term > div > fieldset.form-wrapper > .fieldset-wrapper .form-type-textarea,
+.taxonomy-form-term > div > fieldset.form-wrapper > .details-child-wrapper .form-type-textarea,
+.taxonomy-form-term > div > details > .fieldset-wrapper .form-type-textarea,
+.taxonomy-form-term > div > details > .details-child-wrapper .form-type-textarea,
+.user-profile-form > div > fieldset.form-wrapper > .fieldset-wrapper .form-type-textarea,
+.user-profile-form > div > fieldset.form-wrapper > .details-child-wrapper .form-type-textarea,
+.user-profile-form > div > details > .fieldset-wrapper .form-type-textarea,
+.user-profile-form > div > details > .details-child-wrapper .form-type-textarea {
+  margin: 0;
+}
+.node-form > div > fieldset.group-main > legend,
+.taxonomy-form > div > fieldset.group-main > legend,
+.taxonomy-form-term > div > fieldset.group-main > legend,
+.user-profile-form > div > fieldset.group-main > legend {
+  display: none;
+}
+.node-form > div fieldset.tightened,
+.node-form > div details.tightened,
+.taxonomy-form > div fieldset.tightened,
+.taxonomy-form > div details.tightened,
+.taxonomy-form-term > div fieldset.tightened,
+.taxonomy-form-term > div details.tightened,
+.user-profile-form > div fieldset.tightened,
+.user-profile-form > div details.tightened {
+  padding: 0;
+  margin: 0;
+}
+.node-form > div fieldset.tightened legend,
+.node-form > div details.tightened legend,
+.taxonomy-form > div fieldset.tightened legend,
+.taxonomy-form > div details.tightened legend,
+.taxonomy-form-term > div fieldset.tightened legend,
+.taxonomy-form-term > div details.tightened legend,
+.user-profile-form > div fieldset.tightened legend,
+.user-profile-form > div details.tightened legend {
+  display: none;
+}
+.node-form > div fieldset.tightened .fieldset-wrapper,
+.node-form > div fieldset.tightened .details-child-wrapper,
+.node-form > div details.tightened .fieldset-wrapper,
+.node-form > div details.tightened .details-child-wrapper,
+.taxonomy-form > div fieldset.tightened .fieldset-wrapper,
+.taxonomy-form > div fieldset.tightened .details-child-wrapper,
+.taxonomy-form > div details.tightened .fieldset-wrapper,
+.taxonomy-form > div details.tightened .details-child-wrapper,
+.taxonomy-form-term > div fieldset.tightened .fieldset-wrapper,
+.taxonomy-form-term > div fieldset.tightened .details-child-wrapper,
+.taxonomy-form-term > div details.tightened .fieldset-wrapper,
+.taxonomy-form-term > div details.tightened .details-child-wrapper,
+.user-profile-form > div fieldset.tightened .fieldset-wrapper,
+.user-profile-form > div fieldset.tightened .details-child-wrapper,
+.user-profile-form > div details.tightened .fieldset-wrapper,
+.user-profile-form > div details.tightened .details-child-wrapper {
+  padding: 0;
+  margin: 0;
+}
+.node-form > div fieldset.tightened .fieldset-wrapper label,
+.node-form > div fieldset.tightened .details-child-wrapper label,
+.node-form > div details.tightened .fieldset-wrapper label,
+.node-form > div details.tightened .details-child-wrapper label,
+.taxonomy-form > div fieldset.tightened .fieldset-wrapper label,
+.taxonomy-form > div fieldset.tightened .details-child-wrapper label,
+.taxonomy-form > div details.tightened .fieldset-wrapper label,
+.taxonomy-form > div details.tightened .details-child-wrapper label,
+.taxonomy-form-term > div fieldset.tightened .fieldset-wrapper label,
+.taxonomy-form-term > div fieldset.tightened .details-child-wrapper label,
+.taxonomy-form-term > div details.tightened .fieldset-wrapper label,
+.taxonomy-form-term > div details.tightened .details-child-wrapper label,
+.user-profile-form > div fieldset.tightened .fieldset-wrapper label,
+.user-profile-form > div fieldset.tightened .details-child-wrapper label,
+.user-profile-form > div details.tightened .fieldset-wrapper label,
+.user-profile-form > div details.tightened .details-child-wrapper label {
+  padding: 0;
+}
+.node-form > div div,
+.taxonomy-form > div div,
+.taxonomy-form-term > div div,
+.user-profile-form > div div {
+  font-size: 1rem;
+  width: auto;
+}
+.node-form > div > div,
+.taxonomy-form > div > div,
+.taxonomy-form-term > div > div,
+.user-profile-form > div > div {
+  width: 100%;
+}
+.node-form > div > div div,
+.taxonomy-form > div > div div,
+.taxonomy-form-term > div > div div,
+.user-profile-form > div > div div {
+  width: auto;
+}
+.node-form > div:first-child,
+.taxonomy-form > div:first-child,
+.taxonomy-form-term > div:first-child,
+.user-profile-form > div:first-child {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
+}
+.node-form > div:first-child fieldset,
+.node-form > div:first-child section,
+.node-form > div:first-child details,
+.taxonomy-form > div:first-child fieldset,
+.taxonomy-form > div:first-child section,
+.taxonomy-form > div:first-child details,
+.taxonomy-form-term > div:first-child fieldset,
+.taxonomy-form-term > div:first-child section,
+.taxonomy-form-term > div:first-child details,
+.user-profile-form > div:first-child fieldset,
+.user-profile-form > div:first-child section,
+.user-profile-form > div:first-child details {
+  flex-grow: 1;
+}
+.node-form > div:first-child .form-item-langcode,
+.taxonomy-form > div:first-child .form-item-langcode,
+.taxonomy-form-term > div:first-child .form-item-langcode,
+.user-profile-form > div:first-child .form-item-langcode {
+  width: 100%;
+}
+.node-form .vertical-tabs,
+.taxonomy-form .vertical-tabs,
+.taxonomy-form-term .vertical-tabs,
+.user-profile-form .vertical-tabs {
+  width: 100%;
+}
+
+.field-type-image .image-preview img {
+  max-width: 150px;
+}
+
+.user-picture {
+  max-width: 150px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  float: left;
+}
+
+.form-type-file {
+  clear: left;
+}
+
+.group-media {
+  background-color: rgba(52, 152, 219, 0.05);
+}
+
+.group-details {
+  background-color: rgba(24, 188, 156, 0.05);
+}
+
+.group-additional-content {
+  background-color: #EFF1F5;
+}
+
+.js input.form-autocomplete + .autocomplete-icon {
+  position: absolute;
+  right: 2.25em;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+}
+
+.field-widget-taxonomy-autocomplete > .form-item {
+  position: relative;
+}
+
+fieldset fieldset,
+details details,
+input.form-autocomplete,
+input.form-text,
+input.form-tel,
+input.form-email,
+input.form-url,
+input.form-color,
+input.form-number,
+input.form-search,
+input.form-file,
+textarea.form-textarea {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+fieldset select.form-select,
+fieldset table,
+section select.form-select,
+section table,
+details select.form-select,
+details table {
+  max-width: 100%;
+}
+fieldset select.form-select th.field-label,
+fieldset table th.field-label,
+section select.form-select th.field-label,
+section table th.field-label,
+details select.form-select th.field-label,
+details table th.field-label {
+  padding: 0;
+  background-color: transparent;
+}
+fieldset select.form-select th.field-label label,
+fieldset table th.field-label label,
+section select.form-select th.field-label label,
+section table th.field-label label,
+details select.form-select th.field-label label,
+details table th.field-label label {
+  padding: 0;
+}
+fieldset select.form-select tr.odd,
+fieldset select.form-select tr.even,
+fieldset table tr.odd,
+fieldset table tr.even,
+section select.form-select tr.odd,
+section select.form-select tr.even,
+section table tr.odd,
+section table tr.even,
+details select.form-select tr.odd,
+details select.form-select tr.even,
+details table tr.odd,
+details table tr.even {
+  background-color: transparent;
+}
+fieldset select.form-select tr.odd td,
+fieldset select.form-select tr.even td,
+fieldset table tr.odd td,
+fieldset table tr.even td,
+section select.form-select tr.odd td,
+section select.form-select tr.even td,
+section table tr.odd td,
+section table tr.even td,
+details select.form-select tr.odd td,
+details select.form-select tr.even td,
+details table tr.odd td,
+details table tr.even td {
+  padding: 5px;
+}
+fieldset fieldset,
+fieldset details,
+section fieldset,
+section details,
+details fieldset,
+details details {
+  border: none;
+}
+
+@media (min-width: 40em) {
+  .third,
+  .twothird,
+  .half,
+  .quarter,
+  .full,
+  .field-group-fieldset,
+  .field-group-details,
+  .group-details,
+  .group-content,
+  .group-media {
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .full,
+  .field-group-fieldset,
+  .field-group-details,
+  .form-wrapper {
+    width: 100%;
+    flex-grow: 10;
+    display: block;
+    flex-basis: 1;
+  }
+  .third,
+  .group-details,
+  .group-categorization,
+  .group-meta {
+    width: 33%;
+    margin: 0;
+    flex-grow: 3.3;
+    display: inline-block;
+    flex-basis: 0.33;
+  }
+  .twothird,
+  .group-content,
+  .group-main-content {
+    width: 64%;
+    margin: 0;
+    flex-grow: 6.6;
+    display: inline-block;
+    flex-basis: 0.66;
+  }
+  .half {
+    width: 50%;
+    margin: 0;
+    flex-grow: 5;
+    display: inline-block;
+    flex-basis: 0.5;
+  }
+  .quarter {
+    width: 25%;
+    margin: 0;
+    flex-grow: 2.5;
+    display: inline-block;
+    flex-basis: 0.25;
+  }
+}
+/* Misc specific hacks */
+thead tr:first-of-type {
+  border: none;
+}
+thead tr:first-of-type th {
+  border: none;
+}
+
+/* Youtube field in a smaller width */
+.field-type-youtube table {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Link fields */
+.link-field-subrow {
+  display: flex;
+  flex-flow: column;
+}
+
+@media all and (min-width: 48em) {
+  .link-field-subrow {
+    flex-flow: row wrap;
+  }
+  .link-field-subrow > div {
+    min-width: 200px;
+  }
+}
+.field-type-entityreference input {
+  max-width: 100%;
+  width: 100%;
+}
+.field-type-entityreference input.form-submit {
+  width: inherit;
+}
+.field-type-entityreference table tr:last-child {
+  border-bottom: none;
+}
+
+.entityconnect-edit.edit-icon :first-child,
+.entityconnect-add.add-icon :first-child {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+pre {
+  color: #000;
+}/*# sourceMappingURL=kohu.css.map */

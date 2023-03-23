@@ -1,0 +1,99 @@
+/*** Variables ***/
+:root {
+  /* Theme Colours */
+  --bg: #fff;
+  --bg-alt: #ebebeb;
+  --border: #dcdcdc;
+  --text: #232323;
+  --text-alt: #969696;
+  --grey: #c8c8c8;
+  --grey-alt: #646464;
+  --table-row: #f6f6f6;
+  --table-row-hover: rgba(0, 0, 0, 0.08);
+  --table-cell-active: rgba(0, 0, 0, 0.04);
+  --status: #18bc9c;
+  --status-alt: #149a80;
+  --info: #3498db;
+  --info-alt: #2384c6;
+  --warning: #f39c12;
+  --warning-alt: #d4860b;
+  --error: #e74c3c;
+  --error-alt: #e12e1c;
+  /* User-Selected Colours (default values) */
+  --primary: hsl(210, 29%, 24%);
+  --primary-alt: hsl(210, 29%, 17%);
+  --primary-text: #fff;
+  --links: hsl(168, 77%, 42%);
+  --links-alt: hsl(168, 77%, 30%);
+  --links-text: #fff;
+  /* Font Awesome */
+  --fa-family-free: 'Font Awesome 5 Free';
+  --fa-weight-solid: 900;
+  --fa-weight-regular: 400;
+  /* Other */
+  --radius: 3px;
+}
+
+body {
+  padding-bottom: 4rem;
+}
+
+.l-content > form > div > .form-actions,
+.l-content > form > div > #layout-edit > .form-actions,
+.l-content > .views-admin > form > div > .form-actions,
+.l-content > .editableviews-entity-form > div > .form-actions {
+  position: fixed;
+  bottom: 0;
+  background: #cbd3db;
+  border-top: 2px solid #c8c8c8;
+  width: 100vw;
+  left: 0;
+  right: auto;
+  padding: 20px 40px 8px;
+  margin: 0;
+  z-index: 999;
+  padding: 10px 40px;
+  -webkit-box-shadow: 0 -5px 15px rgba(255, 255, 255, 0.8);
+          box-shadow: 0 -5px 15px rgba(255, 255, 255, 0.8);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.l-content > form > div > .form-actions input.form-submit,
+.l-content > form > div > #layout-edit > .form-actions input.form-submit,
+.l-content > .views-admin > form > div > .form-actions input.form-submit,
+.l-content > .editableviews-entity-form > div > .form-actions input.form-submit {
+  margin-bottom: 0 !important;
+}
+
+.l-content > form > div > .form-actions a.button-secondary,
+.l-content > form > div > .form-actions input.button-secondary,
+.l-content > form > div > .form-actions button.button-secondary,
+.l-content > form > div > #layout-edit > .form-actions a.button-secondary,
+.l-content > form > div > #layout-edit > .form-actions input.button-secondary,
+.l-content > form > div > #layout-edit > .form-actions button.button-secondary,
+.l-content > .views-admin > form > div > .form-actions a.button-secondary,
+.l-content > .views-admin > form > div > .form-actions input.button-secondary,
+.l-content > .views-admin > form > div > .form-actions button.button-secondary,
+.l-content > .editableviews-entity-form > div > .form-actions a.button-secondary,
+.l-content > .editableviews-entity-form > div > .form-actions input.button-secondary,
+.l-content > .editableviews-entity-form > div > .form-actions button.button-secondary {
+  color: #d3e2e1;
+  margin-bottom: 0;
+}
+
+.l-content > form > div > .form-actions a.button-secondary:hover,
+.l-content > form > div > .form-actions input.button-secondary:hover,
+.l-content > form > div > .form-actions button.button-secondary:hover,
+.l-content > form > div > #layout-edit > .form-actions a.button-secondary:hover,
+.l-content > form > div > #layout-edit > .form-actions input.button-secondary:hover,
+.l-content > form > div > #layout-edit > .form-actions button.button-secondary:hover,
+.l-content > .views-admin > form > div > .form-actions a.button-secondary:hover,
+.l-content > .views-admin > form > div > .form-actions input.button-secondary:hover,
+.l-content > .views-admin > form > div > .form-actions button.button-secondary:hover,
+.l-content > .editableviews-entity-form > div > .form-actions a.button-secondary:hover,
+.l-content > .editableviews-entity-form > div > .form-actions input.button-secondary:hover,
+.l-content > .editableviews-entity-form > div > .form-actions button.button-secondary:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=sticky_actions.css.map */

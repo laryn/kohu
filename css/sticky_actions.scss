@@ -1,0 +1,41 @@
+  @import 'variables.scss';
+
+  body {
+    padding-bottom: 4rem;
+  }
+
+  .l-content > form > div > .form-actions,
+  .l-content > form > div > #layout-edit > .form-actions,
+  .l-content > .views-admin > form > div > .form-actions,
+  .l-content > .editableviews-entity-form > div > .form-actions {
+    position: fixed;
+    bottom: 0;
+    background: #cbd3db;
+    border-top: 2px solid $grey;
+    width: 100vw;
+    left: 0;
+    right: auto;
+    padding: 20px 40px 8px;
+    margin: 0;
+    z-index: 999;
+    padding: 10px 40px;
+    box-shadow: 0 -5px 15px rgba(255, 255, 255, .8);
+    box-sizing: border-box;
+
+    input.form-submit {
+      margin-bottom: 0 !important;
+    }
+
+    a.button-secondary,
+    input.button-secondary,
+    button.button-secondary {
+      color: $accent;
+      margin-bottom: 0;
+    }
+
+    a.button-secondary:hover,
+    input.button-secondary:hover,
+    button.button-secondary:hover {
+      color: #fff;
+    }
+  }
