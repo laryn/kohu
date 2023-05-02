@@ -49,12 +49,11 @@ table {
     font-size: 0;
 
 
-    > fieldset.form-wrapper,
+    > fieldset.form-wrapper:not(.group-details),
     > details {
       font-size: 1rem;
       margin: 0;
       border: 2px solid #fff;
-      ;
       padding-top: 1rem;
       padding-bottom: 1rem;
 
@@ -221,7 +220,7 @@ table {
 
 .js input.form-autocomplete + .autocomplete-icon {
   position: absolute;
-  right: 2.25em;
+  right: .5em;
   line-height: 1.5em;
   padding: 0.5em 0;
 }
@@ -407,4 +406,21 @@ thead {
 
 pre {
   color: #000;
+}
+
+fieldset.group-details {
+  .field-multiple-table {
+    td {
+      .form-item {
+        margin-left: 0;
+        input.form-autocomplete {
+          width: calc(100% - 48px);
+        }
+      }
+    }
+  }
+}
+.entityconnect-add,
+.entityconnect-edit {
+  padding: .25rem;
 }

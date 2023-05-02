@@ -31,7 +31,7 @@
   --links-alt: hsl(168, 77%, 30%);
   --links-text: #fff;
   /* Font Awesome */
-  --fa-family-free: 'Font Awesome 5 Free';
+  --fa-family-free: "Font Awesome 5 Free";
   --fa-weight-solid: 900;
   --fa-weight-regular: 400;
   /* Other */
@@ -42,15 +42,13 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Lato', 'Open Sans', sans-serif;
+  font-family: "Lato", "Open Sans", sans-serif;
 }
 
 /* As this class is added by JS, this prevents animations from happening before
    the theme colours have been updated (i.e. a 'flash of unstyled dark mode') */
 .lumi-js * {
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transition-property: background-color, border-color, color;
+  transition-duration: 0.2s;
   transition-property: background-color, border-color, color;
 }
 
@@ -62,7 +60,7 @@ ul.action-links a {
 }
 
 ul.action-links a:before {
-  content: '\f067';
+  content: "\f067";
   font-family: var(--fa-family-free);
   font-weight: var(--fa-weight-solid);
   margin-right: 0.5em;
@@ -105,7 +103,7 @@ blockquote {
 .breadcrumb li:after {
   background: transparent;
   color: var(--text-alt);
-  content: '/';
+  content: "/";
   display: inline;
   padding: 0 0.5em;
   vertical-align: baseline;
@@ -167,7 +165,7 @@ span.dashboard-external {
 }
 
 span.dashboard-external:before {
-  content: '\f35d';
+  content: "\f35d";
   font-family: var(--fa-family-free);
   font-size: 0.75em;
   font-weight: var(--fa-weight-solid);
@@ -177,7 +175,7 @@ span.dashboard-external:before {
 .admin-dblog .icon::before {
   background: none !important;
   color: var(--text-alt);
-  content: '\f058';
+  content: "\f058";
   font-family: var(--fa-family-free);
   font-size: 2em;
   font-weight: var(--fa-weight-solid);
@@ -186,13 +184,13 @@ span.dashboard-external:before {
 
 .admin-dblog .dblog-info .icon::before {
   color: var(--info);
-  content: '\f05a';
+  content: "\f05a";
 }
 
 .admin-dblog .dblog-debug .icon::before,
 .admin-dblog .dblog-warning .icon::before {
   color: var(--warning);
-  content: '\f06a';
+  content: "\f06a";
 }
 
 .admin-dblog .dblog-error .icon::before,
@@ -200,7 +198,7 @@ span.dashboard-external:before {
 .admin-dblog .dblog-alert .icon::before,
 .admin-dblog .dblog-emergency .icon::before {
   color: var(--error);
-  content: '\f057';
+  content: "\f057";
 }
 
 /* Descriptions/Tips */
@@ -217,8 +215,7 @@ ul.tips,
   background: var(--bg);
   border-color: var(--primary);
   border-radius: var(--radius);
-  -webkit-box-shadow: 0 0 10px var(--grey);
-          box-shadow: 0 0 10px var(--grey);
+  box-shadow: 0 0 10px var(--grey);
   color: var(--text);
 }
 
@@ -235,7 +232,7 @@ ul.tips,
 .ui-widget-content .ui-icon:before,
 .ui-widget-header .ui-icon:before {
   color: var(--text-alt);
-  content: '\f00d';
+  content: "\f00d";
   display: block;
   font-family: var(--fa-family-free);
   font-size: 16px;
@@ -388,7 +385,7 @@ hr {
 }
 
 .installer-browser-install-queue-item a:before {
-  content: '\f00d';
+  content: "\f00d";
   font-family: var(--fa-family-free);
   font-weight: var(--fa-weight-solid);
   margin-right: 0.3em;
@@ -495,7 +492,7 @@ div.messages:before {
 
 div.messages.status:before {
   background-color: var(--status-alt);
-  content: '\f00c';
+  content: "\f00c";
 }
 
 .messages.info {
@@ -504,7 +501,7 @@ div.messages.status:before {
 
 div.messages.info:before {
   background-color: var(--info-alt);
-  content: '\f129';
+  content: "\f129";
 }
 
 .messages.warning {
@@ -513,7 +510,7 @@ div.messages.info:before {
 
 div.messages.warning:before {
   background-color: var(--warning-alt);
-  content: '\f12a';
+  content: "\f12a";
 }
 
 .messages.error {
@@ -522,7 +519,7 @@ div.messages.warning:before {
 
 div.messages.error:before {
   background-color: var(--error-alt);
-  content: '\f00d';
+  content: "\f00d";
 }
 
 /* Modules */
@@ -539,7 +536,7 @@ div.messages.error:before {
 #system-modules .modules-error::before {
   background: transparent;
   color: var(--error);
-  content: '\f057';
+  content: "\f057";
   font-family: var(--fa-family-free);
   font-size: 1.3em;
   font-weight: var(--fa-weight-solid);
@@ -553,7 +550,7 @@ div.messages.error:before {
 }
 
 .more-help-link a:before {
-  content: '\f059';
+  content: "\f059";
   font-family: var(--fa-family-free);
   font-weight: var(--fa-weight-solid);
   margin-right: 0.3em;
@@ -609,7 +606,7 @@ div.messages.error:before {
 
 /* Permalinks */
 footer .permalink:before {
-  content: '\f0c1';
+  content: "\f0c1";
   font-family: var(--fa-family-free);
   font-weight: var(--fa-weight-solid);
   margin-right: 0.3em;
@@ -656,22 +653,22 @@ footer .permalink:before {
 
 .report-status .report-icon div::before {
   color: var(--status);
-  content: '\f058';
+  content: "\f058";
 }
 
 .report-info .report-icon div::before {
   color: var(--info);
-  content: '\f05a';
+  content: "\f05a";
 }
 
 .report-warning .report-icon div::before {
   color: var(--warning);
-  content: '\f06a';
+  content: "\f06a";
 }
 
 .report-error .report-icon div::before {
   color: var(--error);
-  content: '\f057';
+  content: "\f057";
 }
 
 .system-status-report .status-title {
@@ -740,7 +737,7 @@ body .views-displays .secondary .action-list input.form-submit {
 
 .views-admin .icon:before,
 .views-admin .icon-text:before {
-  content: '\f067';
+  content: "\f067";
   font-family: var(--fa-family-free);
   font-size: 0.9em;
   font-weight: var(--fa-weight-solid);
@@ -822,8 +819,7 @@ textarea.form-textarea:focus,
 textarea:focus,
 select.form-select:focus {
   border-color: var(--primary);
-  -webkit-box-shadow: 0 0 0 0.2em rgba(44, 62, 80, 0.25);
-          box-shadow: 0 0 0 0.2em rgba(44, 62, 80, 0.25);
+  box-shadow: 0 0 0 0.2em rgba(44, 62, 80, 0.25);
   color: var(--grey-alt);
 }
 
@@ -929,38 +925,26 @@ label,
   background: transparent;
   padding-right: 2em;
 }
-
 .js input.form-autocomplete + .autocomplete-icon {
   position: relative;
-  right: 1.5em;
+  right: 0.5em;
 }
-
 .js input.form-autocomplete + .autocomplete-icon:before {
   color: var(--text-alt);
-  content: '\f111';
+  content: "\f111";
   display: inline-block;
   font-family: var(--fa-family-free);
   font-weight: var(--fa-weight-regular);
 }
-
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-
 .js input.form-autocomplete.throbbing + .autocomplete-icon:before {
-  -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
   color: var(--primary);
-  content: '\f1ce';
+  content: "\f1ce";
   font-weight: var(--fa-weight-solid);
 }
 
@@ -996,8 +980,7 @@ a.button-secondary,
 input.button-secondary,
 button.button-secondary {
   background: var(--grey-alt);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 a.button-secondary:hover,
@@ -1015,8 +998,7 @@ input.button-danger,
 button.button-danger {
   background: transparent;
   border: 1px solid var(--error);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   color: var(--error);
 }
 
@@ -1244,8 +1226,6 @@ th.active {
 }
 
 th.sortable a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1255,7 +1235,7 @@ th.sortable a.active {
 
 th.sortable a:after {
   color: var(--grey);
-  content: '\f0dc';
+  content: "\f0dc";
   font-family: var(--fa-family-free);
   font-weight: var(--fa-weight-solid);
   margin-left: auto;
@@ -1266,11 +1246,11 @@ th.sortable a:hover:after {
 }
 
 th.sortable.sort-asc a:after {
-  content: '\f0de';
+  content: "\f0de";
 }
 
 th.sortable.sort-desc a:after {
-  content: '\f0dd';
+  content: "\f0dd";
 }
 
 th a:hover {
@@ -1278,16 +1258,14 @@ th a:hover {
 }
 
 tbody {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 tr.even,
 tr.odd {
   background: var(--table-row);
   border-bottom: 1px solid var(--border);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 tr:first-of-type {
@@ -1323,6 +1301,12 @@ td.active {
 
 .draggable td:first-of-type {
   padding-left: 2.5em;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+fieldset.group-details .draggable td:first-of-type {
+  max-width: 30px;
 }
 
 .draggable a.tabledrag-handle {
@@ -1339,7 +1323,7 @@ td.active {
 }
 
 .draggable a.tabledrag-handle:before {
-  content: '\f0b2';
+  content: "\f0b2";
   font-family: var(--fa-family-free);
   font-weight: var(--fa-weight-solid);
 }
@@ -1350,5 +1334,4 @@ a.tabledrag-handle .handle {
 
 table.sticky-header {
   background-color: var(--bg);
-}
-/*# sourceMappingURL=lumi.css.map */
+}/*# sourceMappingURL=lumi.css.map */

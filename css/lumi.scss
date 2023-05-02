@@ -892,19 +892,19 @@ label,
 .js input.form-autocomplete {
   background: transparent;
   padding-right: 2em;
-}
 
-.js input.form-autocomplete + .autocomplete-icon {
-  position: relative;
-  right: 1.5em;
-}
+  + .autocomplete-icon {
+    position: relative;
+    right: .5em;
+  }
 
-.js input.form-autocomplete + .autocomplete-icon:before {
-  color: var(--text-alt);
-  content: '\f111';
-  display: inline-block;
-  font-family: var(--fa-family-free);
-  font-weight: var(--fa-weight-regular);
+  + .autocomplete-icon:before {
+    color: var(--text-alt);
+    content: '\f111';
+    display: inline-block;
+    font-family: var(--fa-family-free);
+    font-weight: var(--fa-weight-regular);
+  }
 }
 
 @-moz-keyframes spin {
@@ -1291,6 +1291,13 @@ td.active {
 
 .draggable td:first-of-type {
   padding-left: 2.5em;
+  width: max-content;
+}
+
+fieldset.group-details {
+  .draggable td:first-of-type {
+    max-width: 30px;
+  }
 }
 
 .draggable a.tabledrag-handle {
